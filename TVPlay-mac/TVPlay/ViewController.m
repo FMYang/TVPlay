@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSArray<TVModel *> *listArr;
 @property (weak) IBOutlet NSTableView *tableView;
 @property (weak) IBOutlet NSView *customView;
+@property (weak) IBOutlet NSLayoutConstraint *tableviewWidthConstraint;
 
 ///
 @property (nonatomic, strong) VLCVideoView *videoView;
@@ -26,6 +27,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    [self.view.layer setBackgroundColor:[NSColor.clearColor CGColor]];
+    self.tableView.backgroundColor = NSColor.clearColor;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.doubleAction = @selector(doubleClick:);
@@ -34,6 +37,7 @@
     rect.size = _customView.frame.size;
 
     _videoView = [[VLCVideoView alloc] initWithFrame:rect];
+    _videoView.backColor = NSColor.clearColor;
     [_customView addSubview:_videoView];
     _videoView.autoresizingMask = NSViewHeightSizable | NSViewWidthSizable;
     _videoView.fillScreen = YES;
@@ -51,6 +55,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(willEnterFull:)
+                                                 name:NSWindowWillEnterFullScreenNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(willExitFull:)
+                                                 name:NSWindowWillExitFullScreenNotification
+                                               object:nil];
 }
 
 - (void)viewDidDisappear {
@@ -76,6 +90,15 @@
     if(!self.player.isPlaying && self.playList.count > 0) {
         [self.player play];
     }
+}
+
+#pragma mark - noti
+- (void)willEnterFull:(NSNotification *)noti {
+    self.tableviewWidthConstraint.constant = 0;
+}
+
+- (void)willExitFull:(NSNotification *)noti {
+    self.tableviewWidthConstraint.constant = 150;
 }
 
 #pragma mark -

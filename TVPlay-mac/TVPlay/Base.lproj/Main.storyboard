@@ -705,18 +705,18 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController title="TVPlay" id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="750" height="600"/>
+                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="750" height="572"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbe-uE-atR">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="544"/>
                                 <clipView key="contentView" id="L9o-cy-9O5">
-                                    <rect key="frame" x="1" y="1" width="148" height="598"/>
+                                    <rect key="frame" x="1" y="1" width="148" height="542"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" headerView="eDC-XQ-M7g" viewBased="YES" id="kkK-pI-N3t">
-                                            <rect key="frame" x="0.0" y="0.0" width="148" height="570"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="148" height="514"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -767,7 +767,7 @@
                                     <constraint firstAttribute="width" constant="150" id="KxL-ap-Mr1"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="5ab-1e-vfv">
-                                    <rect key="frame" x="1" y="303" width="148" height="16"/>
+                                    <rect key="frame" x="1" y="583" width="148" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="nqM-q2-dFf">
@@ -780,7 +780,7 @@
                                 </tableHeaderView>
                             </scrollView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="B8N-Tc-b9Y">
-                                <rect key="frame" x="150" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="150" y="0.0" width="600" height="544"/>
                             </customView>
                         </subviews>
                         <constraints>
@@ -796,6 +796,7 @@
                     <connections>
                         <outlet property="customView" destination="B8N-Tc-b9Y" id="X0B-4t-5vl"/>
                         <outlet property="tableView" destination="kkK-pI-N3t" id="bEi-lr-Dm6"/>
+                        <outlet property="tableviewWidthConstraint" destination="KxL-ap-Mr1" id="Fdf-LJ-sdx"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
