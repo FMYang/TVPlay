@@ -25,17 +25,18 @@
 		E47F56E5265CAE3C002ABC11 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47F56E4265CAE3C002ABC11 /* QuartzCore.framework */; };
 		E47F56E7265CAE41002ABC11 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47F56E6265CAE41002ABC11 /* UIKit.framework */; };
 		E47F56E9265CAE48002ABC11 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47F56E8265CAE48002ABC11 /* VideoToolbox.framework */; };
-		E47F56F0265CAF99002ABC11 /* IJKMoviePlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E47F56ED265CAF99002ABC11 /* IJKMoviePlayerViewController.xib */; };
 		E47F56F1265CAF99002ABC11 /* IJKMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47F56EF265CAF99002ABC11 /* IJKMoviePlayerViewController.m */; };
-		E47F56F5265CB013002ABC11 /* IJKMediaControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E47F56F3265CB013002ABC11 /* IJKMediaControl.m */; };
-		E47F56FA265CB043002ABC11 /* IJKDemoHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = E47F56F8265CB043002ABC11 /* IJKDemoHistory.m */; };
 		E47F56FD265CB13E002ABC11 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E47F56FC265CB13E002ABC11 /* libc++.tbd */; };
 		E47F5719265CC9E1002ABC11 /* TVModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E47F5718265CC9E1002ABC11 /* TVModel.m */; };
 		E47F571E265CD11D002ABC11 /* TV.json in Resources */ = {isa = PBXBuildFile; fileRef = E47F571D265CD11C002ABC11 /* TV.json */; };
 		E47F5727265CF940002ABC11 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47F5726265CF940002ABC11 /* IJKMediaFramework.framework */; };
+		EFBF212410B4C9BE4FBF3B15 /* libPods-TVPlay-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CA2913D8C5147AB915BDD5 /* libPods-TVPlay-iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F7A7E2F29F46592D56D163F /* Pods-TVPlay-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPlay-iOS.release.xcconfig"; path = "Target Support Files/Pods-TVPlay-iOS/Pods-TVPlay-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		88CA2913D8C5147AB915BDD5 /* libPods-TVPlay-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TVPlay-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E46D8B0FFD440EF88F4411E6 /* Pods-TVPlay-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPlay-iOS.debug.xcconfig"; path = "Target Support Files/Pods-TVPlay-iOS/Pods-TVPlay-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E47F5694265CAD7B002ABC11 /* TVPlay-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TVPlay-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47F5697265CAD7B002ABC11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E47F5698265CAD7B002ABC11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,14 +59,8 @@
 		E47F56E4265CAE3C002ABC11 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E47F56E6265CAE41002ABC11 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E47F56E8265CAE48002ABC11 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
-		E47F56ED265CAF99002ABC11 /* IJKMoviePlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IJKMoviePlayerViewController.xib; sourceTree = "<group>"; };
 		E47F56EE265CAF99002ABC11 /* IJKMoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJKMoviePlayerViewController.h; sourceTree = "<group>"; };
 		E47F56EF265CAF99002ABC11 /* IJKMoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJKMoviePlayerViewController.m; sourceTree = "<group>"; };
-		E47F56F3265CB013002ABC11 /* IJKMediaControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJKMediaControl.m; sourceTree = "<group>"; };
-		E47F56F4265CB013002ABC11 /* IJKMediaControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJKMediaControl.h; sourceTree = "<group>"; };
-		E47F56F7265CB043002ABC11 /* IJKCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJKCommon.h; sourceTree = "<group>"; };
-		E47F56F8265CB043002ABC11 /* IJKDemoHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJKDemoHistory.m; sourceTree = "<group>"; };
-		E47F56F9265CB043002ABC11 /* IJKDemoHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJKDemoHistory.h; sourceTree = "<group>"; };
 		E47F56FC265CB13E002ABC11 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		E47F5717265CC9E1002ABC11 /* TVModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVModel.h; sourceTree = "<group>"; };
 		E47F5718265CC9E1002ABC11 /* TVModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVModel.m; sourceTree = "<group>"; };
@@ -93,18 +88,29 @@
 				E47F56E1265CAE2C002ABC11 /* MobileCoreServices.framework in Frameworks */,
 				E47F56E7265CAE41002ABC11 /* UIKit.framework in Frameworks */,
 				E47F56E9265CAE48002ABC11 /* VideoToolbox.framework in Frameworks */,
+				EFBF212410B4C9BE4FBF3B15 /* libPods-TVPlay-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6EBC13AFA6027D7B902D02D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E46D8B0FFD440EF88F4411E6 /* Pods-TVPlay-iOS.debug.xcconfig */,
+				7F7A7E2F29F46592D56D163F /* Pods-TVPlay-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E47F568B265CAD7B002ABC11 = {
 			isa = PBXGroup;
 			children = (
 				E47F5696265CAD7B002ABC11 /* TVPlay-iOS */,
 				E47F5695265CAD7B002ABC11 /* Products */,
 				E47F56C9265CADEA002ABC11 /* Frameworks */,
+				A6EBC13AFA6027D7B902D02D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,12 +136,6 @@
 				E47F56A9265CAD7E002ABC11 /* main.m */,
 				E47F56EE265CAF99002ABC11 /* IJKMoviePlayerViewController.h */,
 				E47F56EF265CAF99002ABC11 /* IJKMoviePlayerViewController.m */,
-				E47F56ED265CAF99002ABC11 /* IJKMoviePlayerViewController.xib */,
-				E47F56F4265CB013002ABC11 /* IJKMediaControl.h */,
-				E47F56F3265CB013002ABC11 /* IJKMediaControl.m */,
-				E47F56F7265CB043002ABC11 /* IJKCommon.h */,
-				E47F56F9265CB043002ABC11 /* IJKDemoHistory.h */,
-				E47F56F8265CB043002ABC11 /* IJKDemoHistory.m */,
 				E47F5717265CC9E1002ABC11 /* TVModel.h */,
 				E47F5718265CC9E1002ABC11 /* TVModel.m */,
 				E47F571D265CD11C002ABC11 /* TV.json */,
@@ -160,6 +160,7 @@
 				E47F56CF265CAE06002ABC11 /* CoreGraphics.framework */,
 				E47F56CD265CAE01002ABC11 /* AVFoundation.framework */,
 				E47F56CB265CADF9002ABC11 /* AudioToolbox.framework */,
+				88CA2913D8C5147AB915BDD5 /* libPods-TVPlay-iOS.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,6 +172,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E47F56AD265CAD7E002ABC11 /* Build configuration list for PBXNativeTarget "TVPlay-iOS" */;
 			buildPhases = (
+				EB4D353E6DB1C8665C989A22 /* [CP] Check Pods Manifest.lock */,
 				E47F5690265CAD7B002ABC11 /* Sources */,
 				E47F5691265CAD7B002ABC11 /* Frameworks */,
 				E47F5692265CAD7B002ABC11 /* Resources */,
@@ -223,23 +225,45 @@
 				E47F56A7265CAD7E002ABC11 /* LaunchScreen.storyboard in Resources */,
 				E47F571E265CD11D002ABC11 /* TV.json in Resources */,
 				E47F56A4265CAD7E002ABC11 /* Assets.xcassets in Resources */,
-				E47F56F0265CAF99002ABC11 /* IJKMoviePlayerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EB4D353E6DB1C8665C989A22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TVPlay-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E47F5690265CAD7B002ABC11 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E47F56FA265CB043002ABC11 /* IJKDemoHistory.m in Sources */,
 				E47F5719265CC9E1002ABC11 /* TVModel.m in Sources */,
 				E47F569F265CAD7B002ABC11 /* ViewController.m in Sources */,
 				E47F5699265CAD7B002ABC11 /* AppDelegate.m in Sources */,
 				E47F56F1265CAF99002ABC11 /* IJKMoviePlayerViewController.m in Sources */,
-				E47F56F5265CB013002ABC11 /* IJKMediaControl.m in Sources */,
 				E47F56AA265CAD7E002ABC11 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +396,7 @@
 		};
 		E47F56AE265CAD7E002ABC11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E46D8B0FFD440EF88F4411E6 /* Pods-TVPlay-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -395,6 +420,7 @@
 		};
 		E47F56AF265CAD7E002ABC11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F7A7E2F29F46592D56D163F /* Pods-TVPlay-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

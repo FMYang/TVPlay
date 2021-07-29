@@ -9,6 +9,7 @@
 #import <IJKMediaFramework/IJKAVMoviePlayerController.h>
 #import "IJKMoviePlayerViewController.h"
 #import "TVModel.h"
+#import <Masonry/Masonry.h>
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -20,7 +21,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"💗";
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(0);
+    }];
     [self loadData];
+}
+
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 
 - (void)loadData {
@@ -69,11 +82,9 @@
 - (UITableView *)tableView {
     if(!_tableView) {
         _tableView = [[UITableView alloc] init];
-        _tableView.frame = self.view.bounds;
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"cell"];
-        [self.view addSubview:_tableView];
     }
     return _tableView;
 }
