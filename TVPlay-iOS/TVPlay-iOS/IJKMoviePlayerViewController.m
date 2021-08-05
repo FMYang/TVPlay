@@ -17,6 +17,7 @@
 
 #import "IJKMoviePlayerViewController.h"
 #import <Masonry/Masonry.h>
+#import "TVClockView.h"
 
 @interface IJKVideoViewController()
 
@@ -26,6 +27,7 @@
 @property (nonatomic, strong) UIButton *closeButton;
 @property (nonatomic, strong) UIButton *clockButton;
 @property (nonatomic, assign) BOOL isShowControlView;
+@property (nonatomic, strong) TVClockView *clockView;
 
 // 定时关闭时间（默认30min）
 @property (nonatomic, assign) NSInteger closeTime;
@@ -74,6 +76,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = UIColor.blackColor;
     // Do any additional setup after loading the view from its nib.
 
 //    [[UIApplication sharedApplication] setStatusBarHidden:YES];
@@ -91,12 +94,12 @@
 
     IJKFFOptions *options = [IJKFFOptions optionsByDefault];
 
-    self.player = [[IJKFFMoviePlayerController alloc] initWithContentURL:self.url withOptions:options];
-    self.player.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    self.player.view.frame = self.view.bounds;
-    self.player.view.backgroundColor = UIColor.blackColor;
-    self.player.scalingMode = IJKMPMovieScalingModeAspectFit;
-    self.player.shouldAutoplay = YES;
+//    self.player = [[IJKFFMoviePlayerController alloc] initWithContentURL:self.url withOptions:options];
+//    self.player.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+//    self.player.view.frame = self.view.bounds;
+//    self.player.view.backgroundColor = UIColor.blackColor;
+//    self.player.scalingMode = IJKMPMovieScalingModeAspectFit;
+//    self.player.shouldAutoplay = YES;
 
     self.view.autoresizesSubviews = YES;
     [self.view addSubview:self.player.view];
@@ -296,6 +299,7 @@
     [self.view addSubview:self.controlView];
     [self.controlView addSubview:self.closeButton];
     [self.controlView addSubview:self.clockButton];
+    [self.view addSubview:self.clockView];
     
     [self.controlView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.mas_equalTo(0);
@@ -314,6 +318,13 @@
         make.right.equalTo(self.controlView.mas_right).offset(-safeAreaInsets.bottom);
         make.width.mas_equalTo(100);
         make.height.mas_equalTo(44);
+    }];
+    
+    [self.clockView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(200);
+        make.right.equalTo(self.view.mas_right).offset(-200);
+        make.top.mas_equalTo(0);
+        make.bottom.mas_equalTo(0);
     }];
 }
 
@@ -366,6 +377,13 @@
         [_clockButton addTarget:self action:@selector(clockAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _clockButton;
+}
+
+- (TVClockView *)clockView {
+    if(!_clockView) {
+        _clockView = [[TVClockView alloc] init];
+    }
+    return _clockView;
 }
 
 @end

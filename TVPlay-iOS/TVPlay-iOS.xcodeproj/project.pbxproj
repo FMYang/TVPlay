@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E46F43D026B2B1E900BF6595 /* TVClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = E46F43CF26B2B1E900BF6595 /* TVClockView.m */; };
 		E47F5699265CAD7B002ABC11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E47F5698265CAD7B002ABC11 /* AppDelegate.m */; };
 		E47F569F265CAD7B002ABC11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47F569E265CAD7B002ABC11 /* ViewController.m */; };
 		E47F56A4265CAD7E002ABC11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E47F56A3265CAD7E002ABC11 /* Assets.xcassets */; };
@@ -37,6 +38,8 @@
 		7F7A7E2F29F46592D56D163F /* Pods-TVPlay-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPlay-iOS.release.xcconfig"; path = "Target Support Files/Pods-TVPlay-iOS/Pods-TVPlay-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		88CA2913D8C5147AB915BDD5 /* libPods-TVPlay-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TVPlay-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46D8B0FFD440EF88F4411E6 /* Pods-TVPlay-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPlay-iOS.debug.xcconfig"; path = "Target Support Files/Pods-TVPlay-iOS/Pods-TVPlay-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E46F43CE26B2B1E900BF6595 /* TVClockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVClockView.h; sourceTree = "<group>"; };
+		E46F43CF26B2B1E900BF6595 /* TVClockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVClockView.m; sourceTree = "<group>"; };
 		E47F5694265CAD7B002ABC11 /* TVPlay-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TVPlay-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47F5697265CAD7B002ABC11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E47F5698265CAD7B002ABC11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				E47F5717265CC9E1002ABC11 /* TVModel.h */,
 				E47F5718265CC9E1002ABC11 /* TVModel.m */,
 				E47F571D265CD11C002ABC11 /* TV.json */,
+				E46F43CE26B2B1E900BF6595 /* TVClockView.h */,
+				E46F43CF26B2B1E900BF6595 /* TVClockView.m */,
 			);
 			path = "TVPlay-iOS";
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				E47F5719265CC9E1002ABC11 /* TVModel.m in Sources */,
 				E47F569F265CAD7B002ABC11 /* ViewController.m in Sources */,
 				E47F5699265CAD7B002ABC11 /* AppDelegate.m in Sources */,
+				E46F43D026B2B1E900BF6595 /* TVClockView.m in Sources */,
 				E47F56F1265CAF99002ABC11 /* IJKMoviePlayerViewController.m in Sources */,
 				E47F56AA265CAD7E002ABC11 /* main.m in Sources */,
 			);
