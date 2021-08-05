@@ -28,6 +28,7 @@
 @property (nonatomic, strong) UIButton *clockButton;
 @property (nonatomic, assign) BOOL isShowControlView;
 @property (nonatomic, strong) TVClockView *clockView;
+@property (nonatomic, assign) BOOL isClockViewShow;
 
 // 定时关闭时间（默认30min）
 @property (nonatomic, assign) NSInteger closeTime;
@@ -335,8 +336,9 @@
 
 - (void)clockAction {
     NSLog(@"fm 开启定时关闭，30s后退出");
-    [NSObject cancelPreviousPerformRequestsWithTarget:self];
-    [self performSelector:@selector(exitApp) withObject:nil afterDelay:30*60];
+//    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+//    [self performSelector:@selector(exitApp) withObject:nil afterDelay:30*60];
+    self.isClockViewShow = !self.isClockViewShow;
 }
 
 - (void)exitApp {
@@ -384,6 +386,27 @@
         _clockView = [[TVClockView alloc] init];
     }
     return _clockView;
+}
+
+- (void)showOrHideClockView {
+    if(self.isShowControlView) {
+        [self.clockView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.view.mas_right).offset(0);
+        }];
+    } else {
+        [self.clockView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.view.mas_right).offset(-200);
+        }];
+    }
+    
+    [self.view setNeedsLayout];
+    [self.view layoutIfNeeded];
+}
+
+- (void)setIsClockViewShow:(BOOL)isClockViewShow {
+    _isClockViewShow = isClockViewShow;
+    
+    [self showOrHideClockView];
 }
 
 @end
