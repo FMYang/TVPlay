@@ -7,10 +7,13 @@
 
 #import "TVClockView.h"
 #import <Masonry/Masonry.h>
+#import "TVClockCell.h"
+#import "TVDataManager.h"
 
 @interface TVClockView() <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSArray *datasource;
+@property (nonatomic, strong) UIVisualEffectView *blurView;
 @property (nonatomic, strong) UITableView *tableView;
 
 @end
@@ -32,7 +35,12 @@
 }
 
 - (void)commonInit {
+    [self addSubview:self.blurView];
     [self addSubview:self.tableView];
+    [self.blurView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self);
+    }];
+    
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
@@ -44,34 +52,70 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.backgroundColor = UIColor.clearColor;
-    cell.textLabel.text = self.datasource[indexPath.row];
-    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    TVClockCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.timeLabel.text = self.datasource[indexPath.row];
+    if(indexPath.row == [self selectedIndex]) {
+        cell.timeLabel.textColor = UIColor.yellowColor;
+    } else {
+        cell.timeLabel.textColor = UIColor.whiteColor;
+    }
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
+    return 70;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.row == 0) {
+        TVDataManager.shared.backgroundModeOn = NO;
+        return;
+    }
+    
+    TVDataManager.shared.backgroundModeOn = YES;
+    TVDataManager.shared.clockTime = [self.datasource[indexPath.row] integerValue];
+     
+    [self.tableView reloadData];
+    
+    if(self.clockSetBlock) {
+        self.clockSetBlock();
+    }
 }
 
 #pragma mark -
 - (UITableView *)tableView {
     if(!_tableView) {
         _tableView = [[UITableView alloc] init];
-        _tableView.backgroundColor = [UIColor.blackColor colorWithAlphaComponent:0.8];;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.backgroundColor = [UIColor.blackColor colorWithAlphaComponent:0.2];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        [_tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"cell"];
+        [_tableView registerClass:TVClockCell.class forCellReuseIdentifier:@"cell"];
     }
     return _tableView;
 }
 
+- (UIVisualEffectView *)blurView {
+    if(!_blurView) {
+        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        _blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    }
+    return _blurView;
+}
+
 - (NSArray *)datasource {
     if(!_datasource) {
-        _datasource = @[@"不开启", @"30", @"60", @"90"];
+        _datasource = @[@"不开启", @"30", @"60", @"90", @"120"];
     }
     return _datasource;
+}
+
+- (NSInteger)selectedIndex {
+    if(!TVDataManager.shared.backgroundModeOn) {
+        return 0;
+    }
+    
+    return [self.datasource indexOfObject:[NSString stringWithFormat:@"%ld", TVDataManager.shared.clockTime]];
 }
 
 @end

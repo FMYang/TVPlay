@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E47F5693265CAD7B002ABC11"
-               BuildableName = "TVPlay-iOS.app"
+               BuildableName = "TVPlay.app"
                BlueprintName = "TVPlay-iOS"
                ReferencedContainer = "container:TVPlay-iOS.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E47F5693265CAD7B002ABC11"
-            BuildableName = "TVPlay-iOS.app"
+            BuildableName = "TVPlay.app"
             BlueprintName = "TVPlay-iOS"
             ReferencedContainer = "container:TVPlay-iOS.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E47F5693265CAD7B002ABC11"
-            BuildableName = "TVPlay-iOS.app"
+            BuildableName = "TVPlay.app"
             BlueprintName = "TVPlay-iOS"
             ReferencedContainer = "container:TVPlay-iOS.xcodeproj">
          </BuildableReference>

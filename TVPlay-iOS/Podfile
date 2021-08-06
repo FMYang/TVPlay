@@ -7,5 +7,7 @@ target 'TVPlay-iOS' do
 
   # Pods for TVPlay-iOS
   pod 'Masonry'
+  
+  pod 'PPSPing'
 
 end

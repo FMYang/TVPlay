@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "TVDataManager.h"
 
 @interface AppDelegate ()
 @property (nonatomic, assign) UIBackgroundTaskIdentifier bgTask;
@@ -29,7 +30,10 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     //已经进入后台
-    [self comeToBackgroundMode];
+    if(TVDataManager.shared.backgroundModeOn) {
+        NSLog(@"fm 开启后台任务");
+        [self comeToBackgroundMode];
+    }
 }
 
 - (void)comeToBackgroundMode {

@@ -10,6 +10,7 @@
 #import "IJKMoviePlayerViewController.h"
 #import "TVModel.h"
 #import <Masonry/Masonry.h>
+#import "TVPingTools.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -26,6 +27,10 @@
         make.edges.mas_equalTo(0);
     }];
     [self loadData];
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return NO;
 }
 
 - (BOOL)shouldAutorotate {
@@ -52,7 +57,7 @@
     NSURL *url = [NSURL URLWithString:videoUrl];
     NSString *scheme = [[url scheme] lowercaseString];
     if ([scheme isEqualToString:@"http"] || [scheme isEqualToString:@"https"] || [scheme isEqualToString:@"rtmp"]) {
-        [IJKVideoViewController presentFromViewController:self withTitle:[NSString stringWithFormat:@"URL: %@", url] URL:url completion:nil];
+        [IJKVideoViewController presentFromViewController:self.navigationController withTitle:[NSString stringWithFormat:@"URL: %@", url] URL:url completion:nil];
     }
 }
 

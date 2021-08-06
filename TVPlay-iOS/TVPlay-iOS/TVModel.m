@@ -17,4 +17,17 @@
     return self;
 }
 
++ (NSMutableArray<TVModel *> *)allModels {
+    NSMutableArray *models = @[].mutableCopy;
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"TV.json" ofType:nil];
+    NSData *data = [NSData dataWithContentsOfFile:jsonPath];
+    NSError *err = nil;
+    NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
+    for(NSDictionary *dic in arr) {
+        TVModel *model = [[TVModel alloc] initWithDic:dic];
+        [models addObject:model];
+    }
+    return models;
+}
+
 @end

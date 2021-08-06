@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithDic:(NSDictionary *)dic;
 
++ (NSMutableArray<TVModel *> *)allModels;
+
 @end
 
 NS_ASSUME_NONNULL_END

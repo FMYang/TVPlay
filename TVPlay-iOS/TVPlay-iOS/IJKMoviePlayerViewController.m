@@ -18,8 +18,9 @@
 #import "IJKMoviePlayerViewController.h"
 #import <Masonry/Masonry.h>
 #import "TVClockView.h"
+#import "TVDataManager.h"
 
-@interface IJKVideoViewController()
+@interface IJKVideoViewController() <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIActivityIndicatorView *indicatorView;
 
@@ -32,6 +33,8 @@
 
 // 定时关闭时间（默认30min）
 @property (nonatomic, assign) NSInteger closeTime;
+
+@property (nonatomic, strong) UILabel *errorLabel;
 
 @end
 
@@ -53,6 +56,7 @@
     
     IJKVideoViewController *vc = [[IJKVideoViewController alloc] initWithURL:url];
     vc.modalPresentationStyle = UIModalPresentationFullScreen;
+    vc.modalPresentationCapturesStatusBarAppearance = YES;
     [viewController presentViewController:vc animated:YES completion:completion];
 }
 
@@ -78,11 +82,7 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.blackColor;
-    // Do any additional setup after loading the view from its nib.
-
-//    [[UIApplication sharedApplication] setStatusBarHidden:YES];
-//    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeLeft animated:NO];
-
+    
 #ifdef DEBUG
     [IJKFFMoviePlayerController setLogReport:YES];
     [IJKFFMoviePlayerController setLogLevel:k_IJK_LOG_DEBUG];
@@ -95,12 +95,12 @@
 
     IJKFFOptions *options = [IJKFFOptions optionsByDefault];
 
-//    self.player = [[IJKFFMoviePlayerController alloc] initWithContentURL:self.url withOptions:options];
-//    self.player.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-//    self.player.view.frame = self.view.bounds;
-//    self.player.view.backgroundColor = UIColor.blackColor;
-//    self.player.scalingMode = IJKMPMovieScalingModeAspectFit;
-//    self.player.shouldAutoplay = YES;
+    self.player = [[IJKFFMoviePlayerController alloc] initWithContentURL:self.url withOptions:options];
+    self.player.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    self.player.view.frame = self.view.bounds;
+    self.player.view.backgroundColor = UIColor.blackColor;
+    self.player.scalingMode = IJKMPMovieScalingModeAspectFit;
+    self.player.shouldAutoplay = YES;
 
     self.view.autoresizesSubviews = YES;
     [self.view addSubview:self.player.view];
@@ -110,14 +110,24 @@
     
     [self setupUI];
     
-    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
+    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+    tapGes.delegate = self;
     [self.view addGestureRecognizer:tapGes];
 }
 
-- (void)tapAction {
+- (void)tapAction:(UITapGestureRecognizer *)tap {
+    CGPoint point = [tap locationInView:self.view];
+    if(CGRectContainsPoint(self.clockView.frame, point)) {
+        return;
+    }
+    
     self.isShowControlView = !self.isShowControlView;
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
     [self performSelector:@selector(hideControlView) withObject:nil afterDelay:2.0];
+    
+    if(self.isClockViewShow) {
+        self.isClockViewShow = NO;
+    }
 }
 
 - (void)hideControlView {
@@ -145,8 +155,10 @@
     [self removeMovieNotificationObservers];
 }
 
+// 注意：iOS 11，iPhone X被设置横屏模式强制隐藏，重写无效；
+// iOS 13，所有iPhone被设置横屏模式强制隐藏，重写prefersStatusBarHidden无效；
 - (BOOL)shouldAutorotate {
-    return UIInterfaceOrientationIsLandscape(UIDevice.currentDevice.orientation);
+    return UIInterfaceOrientationIsLandscape((UIInterfaceOrientation)UIDevice.currentDevice.orientation);
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
@@ -203,7 +215,10 @@
             break;
 
         case IJKMPMovieFinishReasonPlaybackError:
+            self.errorLabel.hidden = NO;
+            [self.indicatorView stopAnimating];
             NSLog(@"playbackStateDidChange: IJKMPMovieFinishReasonPlaybackError: %d\n", reason);
+            
             break;
 
         default:
@@ -301,6 +316,7 @@
     [self.controlView addSubview:self.closeButton];
     [self.controlView addSubview:self.clockButton];
     [self.view addSubview:self.clockView];
+    [self.view addSubview:self.errorLabel];
     
     [self.controlView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.mas_equalTo(0);
@@ -323,9 +339,13 @@
     
     [self.clockView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(200);
-        make.right.equalTo(self.view.mas_right).offset(-200);
+        make.right.equalTo(self.view.mas_right).offset(200);
         make.top.mas_equalTo(0);
         make.bottom.mas_equalTo(0);
+    }];
+    
+    [self.errorLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
     }];
 }
 
@@ -335,9 +355,7 @@
 }
 
 - (void)clockAction {
-    NSLog(@"fm 开启定时关闭，30s后退出");
-//    [NSObject cancelPreviousPerformRequestsWithTarget:self];
-//    [self performSelector:@selector(exitApp) withObject:nil afterDelay:30*60];
+    self.isShowControlView = NO;
     self.isClockViewShow = !self.isClockViewShow;
 }
 
@@ -349,6 +367,8 @@
 - (void)setIsShowControlView:(BOOL)isShowControlView {
     _isShowControlView = isShowControlView;
     self.controlView.hidden = !isShowControlView;
+    
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 #pragma mark - getter
@@ -384,29 +404,66 @@
 - (TVClockView *)clockView {
     if(!_clockView) {
         _clockView = [[TVClockView alloc] init];
+        __weak IJKVideoViewController *weakSelf = self;
+        _clockView.clockSetBlock = ^{
+            __strong IJKVideoViewController *strongSelf = weakSelf;
+            [NSObject cancelPreviousPerformRequestsWithTarget:strongSelf];
+            [strongSelf performSelector:@selector(exitApp) withObject:nil afterDelay:TVDataManager.shared.clockTime*60];
+            NSLog(@"fm 设置定时关闭");
+            strongSelf.isClockViewShow = NO;
+        };
     }
     return _clockView;
 }
 
-- (void)showOrHideClockView {
-    if(self.isShowControlView) {
+- (void)showClockView {
+    [UIView animateWithDuration:0.25 animations:^{
         [self.clockView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.view.mas_right).offset(0);
         }];
-    } else {
+        
+        [self.view setNeedsLayout];
+        [self.view layoutIfNeeded];
+    }];
+}
+
+- (void)hideClockView {
+    [UIView animateWithDuration:0.25 animations:^{
         [self.clockView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(self.view.mas_right).offset(-200);
+            make.right.equalTo(self.view.mas_right).offset(200);
         }];
-    }
-    
-    [self.view setNeedsLayout];
-    [self.view layoutIfNeeded];
+        [self.view setNeedsLayout];
+        [self.view layoutIfNeeded];
+    }];
 }
 
 - (void)setIsClockViewShow:(BOOL)isClockViewShow {
     _isClockViewShow = isClockViewShow;
     
-    [self showOrHideClockView];
+    if(isClockViewShow) {
+        [self showClockView];
+    } else {
+        [self hideClockView];
+    }
+}
+
+- (UILabel *)errorLabel {
+    if(!_errorLabel) {
+        _errorLabel = [[UILabel alloc] init];
+        _errorLabel.textColor = UIColor.redColor;
+        _errorLabel.text = @"播放失败，地址可能已经失效";
+        _errorLabel.font = [UIFont systemFontOfSize:16 weight:UIFontWeightMedium];
+        _errorLabel.hidden = YES;
+    }
+    return _errorLabel;
+}
+
+#pragma mark - tap手势和uitableview冲突
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if([touch.view isDescendantOfView:self.clockView]) {
+        return NO; // clockView不响应点击手势
+    }
+    return YES;
 }
 
 @end

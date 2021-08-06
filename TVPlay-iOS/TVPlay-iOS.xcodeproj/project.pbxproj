@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E46F43D026B2B1E900BF6595 /* TVClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = E46F43CF26B2B1E900BF6595 /* TVClockView.m */; };
+		E46F443226BCDFA800BF6595 /* TVClockCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E46F443126BCDFA800BF6595 /* TVClockCell.m */; };
+		E46F443526BCE1F800BF6595 /* TVDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E46F443426BCE1F800BF6595 /* TVDataManager.m */; };
+		E46F443826BD264900BF6595 /* TVPingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E46F443726BD264900BF6595 /* TVPingTools.m */; };
+		E46F443B26BD32B600BF6595 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = E46F443A26BD32B600BF6595 /* SimplePing.m */; };
+		E46F443E26BD33C000BF6595 /* TVUrlFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = E46F443D26BD33C000BF6595 /* TVUrlFilter.m */; };
 		E47F5699265CAD7B002ABC11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E47F5698265CAD7B002ABC11 /* AppDelegate.m */; };
 		E47F569F265CAD7B002ABC11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47F569E265CAD7B002ABC11 /* ViewController.m */; };
 		E47F56A4265CAD7E002ABC11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E47F56A3265CAD7E002ABC11 /* Assets.xcassets */; };
@@ -40,7 +45,17 @@
 		E46D8B0FFD440EF88F4411E6 /* Pods-TVPlay-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPlay-iOS.debug.xcconfig"; path = "Target Support Files/Pods-TVPlay-iOS/Pods-TVPlay-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E46F43CE26B2B1E900BF6595 /* TVClockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVClockView.h; sourceTree = "<group>"; };
 		E46F43CF26B2B1E900BF6595 /* TVClockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVClockView.m; sourceTree = "<group>"; };
-		E47F5694265CAD7B002ABC11 /* TVPlay-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TVPlay-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E46F443026BCDFA800BF6595 /* TVClockCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVClockCell.h; sourceTree = "<group>"; };
+		E46F443126BCDFA800BF6595 /* TVClockCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVClockCell.m; sourceTree = "<group>"; };
+		E46F443326BCE1F800BF6595 /* TVDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVDataManager.h; sourceTree = "<group>"; };
+		E46F443426BCE1F800BF6595 /* TVDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVDataManager.m; sourceTree = "<group>"; };
+		E46F443626BD264900BF6595 /* TVPingTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVPingTools.h; sourceTree = "<group>"; };
+		E46F443726BD264900BF6595 /* TVPingTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVPingTools.m; sourceTree = "<group>"; };
+		E46F443926BD32B600BF6595 /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		E46F443A26BD32B600BF6595 /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
+		E46F443C26BD33C000BF6595 /* TVUrlFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVUrlFilter.h; sourceTree = "<group>"; };
+		E46F443D26BD33C000BF6595 /* TVUrlFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVUrlFilter.m; sourceTree = "<group>"; };
+		E47F5694265CAD7B002ABC11 /* TVPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47F5697265CAD7B002ABC11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E47F5698265CAD7B002ABC11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E47F569D265CAD7B002ABC11 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -120,7 +135,7 @@
 		E47F5695265CAD7B002ABC11 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E47F5694265CAD7B002ABC11 /* TVPlay-iOS.app */,
+				E47F5694265CAD7B002ABC11 /* TVPlay.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +159,16 @@
 				E47F571D265CD11C002ABC11 /* TV.json */,
 				E46F43CE26B2B1E900BF6595 /* TVClockView.h */,
 				E46F43CF26B2B1E900BF6595 /* TVClockView.m */,
+				E46F443026BCDFA800BF6595 /* TVClockCell.h */,
+				E46F443126BCDFA800BF6595 /* TVClockCell.m */,
+				E46F443326BCE1F800BF6595 /* TVDataManager.h */,
+				E46F443426BCE1F800BF6595 /* TVDataManager.m */,
+				E46F443626BD264900BF6595 /* TVPingTools.h */,
+				E46F443726BD264900BF6595 /* TVPingTools.m */,
+				E46F443926BD32B600BF6595 /* SimplePing.h */,
+				E46F443A26BD32B600BF6595 /* SimplePing.m */,
+				E46F443C26BD33C000BF6595 /* TVUrlFilter.h */,
+				E46F443D26BD33C000BF6595 /* TVUrlFilter.m */,
 			);
 			path = "TVPlay-iOS";
 			sourceTree = "<group>";
@@ -188,7 +213,7 @@
 			);
 			name = "TVPlay-iOS";
 			productName = "TVPlay-iOS";
-			productReference = E47F5694265CAD7B002ABC11 /* TVPlay-iOS.app */;
+			productReference = E47F5694265CAD7B002ABC11 /* TVPlay.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -266,11 +291,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E47F5719265CC9E1002ABC11 /* TVModel.m in Sources */,
+				E46F443826BD264900BF6595 /* TVPingTools.m in Sources */,
+				E46F443526BCE1F800BF6595 /* TVDataManager.m in Sources */,
+				E46F443E26BD33C000BF6595 /* TVUrlFilter.m in Sources */,
+				E46F443B26BD32B600BF6595 /* SimplePing.m in Sources */,
 				E47F569F265CAD7B002ABC11 /* ViewController.m in Sources */,
 				E47F5699265CAD7B002ABC11 /* AppDelegate.m in Sources */,
 				E46F43D026B2B1E900BF6595 /* TVClockView.m in Sources */,
 				E47F56F1265CAF99002ABC11 /* IJKMoviePlayerViewController.m in Sources */,
 				E47F56AA265CAD7E002ABC11 /* main.m in Sources */,
+				E46F443226BCDFA800BF6595 /* TVClockCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +449,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZHIYUN.www.TVPlay-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TVPlay;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -443,7 +473,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZHIYUN.www.TVPlay-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TVPlay;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
