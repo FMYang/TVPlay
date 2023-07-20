@@ -63,6 +63,10 @@
     return self;
 }
 
+- (BOOL)prefersHomeIndicatorAutoHidden {
+    return YES;
+}
+
 #define EXPECTED_IJKPLAYER_VERSION (1 << 16) & 0xFF) | 
 - (void)viewDidLoad
 {

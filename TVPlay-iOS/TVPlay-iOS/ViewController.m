@@ -17,9 +17,13 @@
 
 @implementation ViewController
 
+- (BOOL)prefersHomeIndicatorAutoHidden {
+    return YES;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"💗";
+    self.navigationItem.title = @"TV";
     [self loadData];
 }
 

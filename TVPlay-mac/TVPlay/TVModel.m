@@ -17,8 +17,8 @@
     NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
     for(NSDictionary *dic in arr) {
         TVModel *model = [[TVModel alloc] init];
-        model.tvName = dic[@"name"];
-        model.tvPath = dic[@"videoUrl"];
+        model.title = dic[@"title"];
+        model.url = dic[@"url"];
         [models addObject:model];
     }
     return models;

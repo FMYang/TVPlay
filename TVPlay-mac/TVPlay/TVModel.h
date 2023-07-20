@@ -11,8 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TVModel : NSObject
 
-@property (nonatomic, copy) NSString *tvName;
-@property (nonatomic, copy) NSString *tvPath;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *url;
 
 + (NSArray<TVModel *> *)allModels;
 

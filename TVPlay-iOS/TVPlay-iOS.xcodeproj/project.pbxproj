@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A20210025C280DEFDFE4843 /* Pods_TVPlay_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8340F96BC26DFDC82D626A3F /* Pods_TVPlay_iOS.framework */; };
 		E47F5699265CAD7B002ABC11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E47F5698265CAD7B002ABC11 /* AppDelegate.m */; };
 		E47F569F265CAD7B002ABC11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47F569E265CAD7B002ABC11 /* ViewController.m */; };
 		E47F56A4265CAD7E002ABC11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E47F56A3265CAD7E002ABC11 /* Assets.xcassets */; };
@@ -36,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E50BC74F194234DECBC2E0D /* Pods-TVPlay-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPlay-iOS.debug.xcconfig"; path = "Target Support Files/Pods-TVPlay-iOS/Pods-TVPlay-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8340F96BC26DFDC82D626A3F /* Pods_TVPlay_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVPlay_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7EFD8B3ED16152EA5B3208C /* Pods-TVPlay-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPlay-iOS.release.xcconfig"; path = "Target Support Files/Pods-TVPlay-iOS/Pods-TVPlay-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E47F5694265CAD7B002ABC11 /* TVPlay-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TVPlay-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47F5697265CAD7B002ABC11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E47F5698265CAD7B002ABC11 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -93,18 +97,30 @@
 				E47F56E1265CAE2C002ABC11 /* MobileCoreServices.framework in Frameworks */,
 				E47F56E7265CAE41002ABC11 /* UIKit.framework in Frameworks */,
 				E47F56E9265CAE48002ABC11 /* VideoToolbox.framework in Frameworks */,
+				2A20210025C280DEFDFE4843 /* Pods_TVPlay_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09334620FF980A8C0B7B6A96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E50BC74F194234DECBC2E0D /* Pods-TVPlay-iOS.debug.xcconfig */,
+				D7EFD8B3ED16152EA5B3208C /* Pods-TVPlay-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E47F568B265CAD7B002ABC11 = {
 			isa = PBXGroup;
 			children = (
 				E47F5696265CAD7B002ABC11 /* TVPlay-iOS */,
 				E47F5695265CAD7B002ABC11 /* Products */,
 				E47F56C9265CADEA002ABC11 /* Frameworks */,
+				09334620FF980A8C0B7B6A96 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +176,7 @@
 				E47F56CF265CAE06002ABC11 /* CoreGraphics.framework */,
 				E47F56CD265CAE01002ABC11 /* AVFoundation.framework */,
 				E47F56CB265CADF9002ABC11 /* AudioToolbox.framework */,
+				8340F96BC26DFDC82D626A3F /* Pods_TVPlay_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E47F56AD265CAD7E002ABC11 /* Build configuration list for PBXNativeTarget "TVPlay-iOS" */;
 			buildPhases = (
+				A2B70105731270717C904A3E /* [CP] Check Pods Manifest.lock */,
 				E47F5690265CAD7B002ABC11 /* Sources */,
 				E47F5691265CAD7B002ABC11 /* Frameworks */,
 				E47F5692265CAD7B002ABC11 /* Resources */,
+				0FBB095559F2765972D87F8D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -228,6 +247,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FBB095559F2765972D87F8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TVPlay-iOS/Pods-TVPlay-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TVPlay-iOS/Pods-TVPlay-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TVPlay-iOS/Pods-TVPlay-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2B70105731270717C904A3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TVPlay-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E47F5690265CAD7B002ABC11 /* Sources */ = {
@@ -372,6 +433,7 @@
 		};
 		E47F56AE265CAD7E002ABC11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E50BC74F194234DECBC2E0D /* Pods-TVPlay-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -395,6 +457,7 @@
 		};
 		E47F56AF265CAD7E002ABC11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7EFD8B3ED16152EA5B3208C /* Pods-TVPlay-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

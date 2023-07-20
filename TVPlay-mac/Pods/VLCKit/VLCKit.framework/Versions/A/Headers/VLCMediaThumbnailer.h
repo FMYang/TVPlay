@@ -21,9 +21,9 @@
  *****************************************************************************/
 
 #import <Foundation/Foundation.h>
-#if TARGET_OS_IPHONE
+//#if TARGET_OS_IPHONE
 # import <CoreGraphics/CoreGraphics.h>
-#endif
+//#endif
 
 @class VLCMedia;
 @class VLCLibrary;

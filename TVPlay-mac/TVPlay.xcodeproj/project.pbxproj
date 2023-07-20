@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4FD39B1AD8BC0F06E5DB81AC /* libPods-TVPlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FEE0BC64DA0CE51107C79AA /* libPods-TVPlay.a */; };
+		887A21F92A694C6900C16F6B /* TV-bak.json in Resources */ = {isa = PBXBuildFile; fileRef = 887A21F82A694C6900C16F6B /* TV-bak.json */; };
 		E42DAAC9265BA61600099701 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E42DAAC8265BA61600099701 /* AppDelegate.m */; };
 		E42DAACC265BA61600099701 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E42DAACB265BA61600099701 /* ViewController.m */; };
 		E42DAACE265BA61A00099701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42DAACD265BA61A00099701 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		7FEE0BC64DA0CE51107C79AA /* libPods-TVPlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TVPlay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		887A21F82A694C6900C16F6B /* TV-bak.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "TV-bak.json"; sourceTree = "<group>"; };
 		AD4DCC1D29244F2161210C58 /* Pods-TVPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPlay.debug.xcconfig"; path = "Target Support Files/Pods-TVPlay/Pods-TVPlay.debug.xcconfig"; sourceTree = "<group>"; };
 		BACE9687AFDB4C1602DEC670 /* Pods-TVPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPlay.release.xcconfig"; path = "Target Support Files/Pods-TVPlay/Pods-TVPlay.release.xcconfig"; sourceTree = "<group>"; };
 		E42DAAC4265BA61600099701 /* TVPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 				E42DAADC265BAD2500099701 /* TVModel.h */,
 				E42DAADD265BAD2500099701 /* TVModel.m */,
 				E46210CA265E1E1D00152C51 /* TV.json */,
+				887A21F82A694C6900C16F6B /* TV-bak.json */,
 			);
 			path = TVPlay;
 			sourceTree = "<group>";
@@ -139,7 +142,7 @@
 				E42DAAC1265BA61600099701 /* Frameworks */,
 				E42DAAC2265BA61600099701 /* Resources */,
 				E47F574F265DF9DE002ABC11 /* Embed Frameworks */,
-				7B71CEB4659D5495A74780D7 /* [CP] Embed Pods Frameworks */,
+				0E233CD8526631CEBCC97F23 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,7 +167,7 @@
 				};
 			};
 			buildConfigurationList = E42DAABF265BA61600099701 /* Build configuration list for PBXProject "TVPlay" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -186,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				887A21F92A694C6900C16F6B /* TV-bak.json in Resources */,
 				E46210CB265E1E1D00152C51 /* TV.json in Resources */,
 				E42DAACE265BA61A00099701 /* Assets.xcassets in Resources */,
 				E42DAAD1265BA61A00099701 /* Main.storyboard in Resources */,
@@ -195,7 +199,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7B71CEB4659D5495A74780D7 /* [CP] Embed Pods Frameworks */ = {
+		0E233CD8526631CEBCC97F23 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

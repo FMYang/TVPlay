@@ -1,430 +1,130 @@
 [
-	{
-		"name": "CCTV-1综合",
-		"videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv1"
-	},
-	{
-		"name": "CCTV-2财经",
-		"videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv2"
-	},
     {
-        "name": "CCTV-3综艺",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv3"
+      "url": "https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/playlist.m3u8",
+      "title": "CCTV+ 1 (600p) [Not 24/7]"
     },
     {
-        "name": "CCTV-4中文国际",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv4"
+      "url": "https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8",
+      "title": "CCTV+ 2 (600p) [Not 24/7]"
     },
     {
-        "name": "CCTV-5体育",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv5"
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225618/index.m3u8",
+      "title": "CCTV-1综合 (1080p)"
     },
     {
-        "name": "CCTV-6电影",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv6"
+      "url": "http://39.134.39.39/PLTV/88888888/224/3221226220/index.m3u8",
+      "title": "CCTV-2财经 (1080p)"
     },
     {
-        "name": "CCTV-7军事农业",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv7"
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225634/index.m3u8",
+      "title": "CCTV-3综艺 (1080p)"
     },
     {
-        "name": "CCTV-8电视剧",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv8"
+      "url": "http://210.210.155.37/qwr9ew/s/s19/index.m3u8",
+      "title": "CCTV-4 Asia (576p)"
     },
     {
-        "name": "CCTV-9记录",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv9"
+      "url": "http://112.25.48.68/live/program/live/cctv4/1300000/mnf.m3u8",
+      "title": "CCTV-4中文国际 (540p)"
     },
     {
-        "name": "CCTV-10科教",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv10"
+      "url": "http://111.63.117.13:6060/030000001000/CCTV-4/CCTV-4.m3u8",
+      "title": "CCTV-4中文国际 (576p)"
     },
     {
-        "name": "CCTV-11戏曲",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv11"
+      "url": "http://223.110.245.159/ott.js.chinamobile.com/PLTV/3/224/3221225781/index.m3u8",
+      "title": "CCTV-4中文国际 (576p)"
     },
     {
-        "name": "CCTV-12社会与法",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv12"
+      "url": "http://183.207.248.71/gitv/live1/CCTV-4/CCTV-4",
+      "title": "CCTV-4中文国际 (576p) [Not 24/7]"
     },
     {
-        "name": "CCTV-13新闻",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv13"
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225621/index.m3u8",
+      "title": "CCTV-4中文国际 (1080p)"
     },
     {
-        "name": "CCTV-14少儿",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv14"
+      "url": "http://39.135.138.59:18890/PLTV/88888910/224/3221225621/index.m3u8",
+      "title": "CCTV-4中文国际 (1080p)"
     },
     {
-        "name": "CCTV-15音乐",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv15"
+      "url": "http://117.169.120.140:8080/live/cctv-4/.m3u8",
+      "title": "CCTV-4中文国际 (1080p)"
     },
     {
-        "name": "安徽卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/ahtv"
+      "url": "http://183.207.248.71/cntv/live1/cctv-4/cctv-4",
+      "title": "CCTV-4中文国际 (1080p)"
     },
     {
-        "name": "兵团卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/bttv"
+      "url": "http://183.207.249.6/PLTV/3/224/3221225534/index.m3u8",
+      "title": "CCTV-4中文国际 (1080p)"
     },
     {
-        "name": "重庆卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cqtv"
+      "url": "http://183.207.249.11/PLTV/3/224/3221225534/index.m3u8",
+      "title": "CCTV-4中文国际 (1080p)"
     },
     {
-        "name": "东方卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/dftv"
+      "url": "http://223.110.245.163/ott.js.chinamobile.com/PLTV/3/224/3221227378/index.m3u8",
+      "title": "CCTV-4中文国际 (1080p)"
     },
     {
-        "name": "东南卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/dntv"
+      "url": "http://223.110.245.165/ott.js.chinamobile.com/PLTV/3/224/3221225534/index.m3u8",
+      "title": "CCTV-4中文国际 (1080p)"
     },
     {
-        "name": "广东卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/gdtv"
+      "url": "http://223.110.245.170/PLTV/3/224/3221225534/index.m3u8",
+      "title": "CCTV-4中文国际 (1080p)"
     },
     {
-        "name": "广西卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/gxtv"
+      "url": "http://116.199.5.51:8114/00000000/index.m3u8?Fsv_CMSID=&Fsv_SV_PARAM1=0&Fsv_ShiftEnable=0&Fsv_ShiftTsp=0&Fsv_chan_hls_se_idx=26&Fsv_cid=0&Fsv_ctype=LIVES&Fsv_ctype=LIVES&Fsv_filetype=1&Fsv_otype=1&Fsv_otype=1&Fsv_rate_id=0&FvSeid=5abd1660af1babb4&Pcontent_id=&Provider_id=",
+      "title": "CCTV-4中文国际 (1080p) [Not 24/7]"
     },
     {
-        "name": "甘肃卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/gstv"
+      "url": "http://116.199.5.52:8114/00000000/index.m3u8?Fsv_CMSID=&Fsv_SV_PARAM1=0&Fsv_ShiftEnable=0&Fsv_ShiftTsp=0&Fsv_chan_hls_se_idx=26&Fsv_cid=0&Fsv_ctype=LIVES&Fsv_ctype=LIVES&Fsv_filetype=1&Fsv_otype=1&Fsv_otype=1&Fsv_rate_id=0&FvSeid=5abd1660af1babb4&Pcontent_id=&Provider_id=",
+      "title": "CCTV-4中文国际 (1080p) [Not 24/7]"
     },
     {
-        "name": "贵州卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/gztv"
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225649/index.m3u8",
+      "title": "CCTV-5+体育赛事 (1080p)"
     },
     {
-        "name": "湖北卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/hbtv"
+      "url": "http://39.134.39.39/PLTV/88888888/224/3221226224/index.m3u8",
+      "title": "CCTV-5体育 (1080p)"
     },
     {
-        "name": "河北卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/hebtv"
+      "url": "http://39.134.39.39/PLTV/88888888/224/3221226226/index.m3u8",
+      "title": "CCTV-6电影 (1080p)"
     },
     {
-        "name": "河南卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/hntv"
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225624/index.m3u8",
+      "title": "CCTV-7国防军事 (1080p)"
     },
     {
-        "name": "黑龙江卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/hljtv"
+      "url": "http://39.134.39.39/PLTV/88888888/224/3221226257/index.m3u8",
+      "title": "CCTV-8电视剧 (1080p)"
     },
     {
-        "name": "江苏卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/jstv"
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225646/index.m3u8",
+      "title": "CCTV-9纪录 (1080p)"
     },
     {
-        "name": "江西卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/jxtv"
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225636/index.m3u8",
+      "title": "CCTV-10科教 (1080p)"
     },
     {
-        "name": "吉林卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/jltv"
+      "url": "http://39.135.138.59:18890/PLTV/88888910/224/3221225628/index.m3u8",
+      "title": "CCTV-11戏曲 (1080p)"
     },
     {
-        "name": "辽宁卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/lntv"
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225637/index.m3u8",
+      "title": "CCTV-12社会与法制 (1080p)"
     },
     {
-        "name": "内蒙古卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/nmtv"
+      "url": "http://39.134.115.163:8080/PLTV/88888910/224/3221225638/index.m3u8",
+      "title": "CCTV-13新闻 (1080p)"
     },
     {
-        "name": "宁夏卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/nxtv"
-    },
-    {
-        "name": "青海卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/qhtv"
-    },
-    {
-        "name": "四川卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/sctv"
-    },
-    {
-        "name": "山东卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/sdtv"
-    },
-    {
-        "name": "山西卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/sxrtv"
-    },
-    {
-        "name": "陕西卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/sxtv"
-    },
-    {
-        "name": "山东教育",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/sdetv"
-    },
-    {
-        "name": "中国教育-1",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cetv1"
-    },
-    {
-        "name": "CCTV-第一剧场",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/dyjctv"
-    },
-    {
-        "name": "CCTV-国防军事",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/gfjstv"
-    },
-    {
-        "name": "CCTV-怀旧剧场",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/hjjctv"
-    },
-    {
-        "name": "CCTV-风云剧场",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/fyjctv"
-    },
-    {
-        "name": "CCTV-风云足球",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/fyzqtv"
-    },
-    {
-        "name": "CCTV-风云音乐",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/fyyytv"
-    },
-    {
-        "name": "CCTV-世界地理",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/sjdltv"
-    },
-    {
-        "name": "CCTV-1HD",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv1hd"
-    },
-    {
-        "name": "CCTV-2HD",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv2hd"
-    },
-    {
-        "name": "CCTV-3HD",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv3hd"
-    },
-    {
-        "name": "CCTV-4HD",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv4hd"
-    },
-    {
-        "name": "CCTV-5HD",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv5hd"
-    },
-    {
-        "name": "CCTV5+HD",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv5phd"
-    },
-    {
-        "name": "CCTV-6HD",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv6hd"
-    },
-    {
-        "name": "CCTV-7HD",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv7hd"
-    },
-    {
-        "name": "CCTV-8HD",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv8hd"
-    },
-    {
-        "name": "CCTV-9HD",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv9hd"
-    },
-    {
-        "name": "CCTV-10HD",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv10hd"
-    },
-    {
-        "name": "CCTV-12HD",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv12hd"
-    },
-    {
-        "name": "CCTV-14HD",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv14hd"
-    },
-    {
-        "name": "CGTN-新闻",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cctv16"
-    },
-    {
-        "name": "CETV-1",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cetv1"
-    },
-    {
-        "name": "CETV-3",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cetv3"
-    },
-    {
-        "name": "CETV-4",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cetv4"
-    },
-    {
-        "name": "北京卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv1hd"
-    },
-    {
-        "name": "北京影视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv4hd"
-    },
-    {
-        "name": "北京体育高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv6hd"
-    },
-    {
-        "name": "北京新闻高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv9hd"
-    },
-    {
-        "name": "北京纪实高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv11hd"
-    },
-    {
-        "name": "北京卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv1"
-    },
-    {
-        "name": "北京文艺",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv2"
-    },
-    {
-        "name": "北京科教",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv3"
-    },
-    {
-        "name": "北京影视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv4"
-    },
-    {
-        "name": "北京财经",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv5"
-    },
-    {
-        "name": "北京体育",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv6"
-    },
-    {
-        "name": "北京生活",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv7"
-    },
-    {
-        "name": "北京青年",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv8"
-    },
-    {
-        "name": "北京新闻",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv9"
-    },
-    {
-        "name": "北京生活",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv10"
-    },
-    {
-        "name": "北京卡酷",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv7"
-    },
-    {
-        "name": "北京文艺高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/btv2hd"
-    },
-    {
-        "name": "安徽卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/ahhd"
-    },
-    {
-        "name": "重庆卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/cqhd"
-    },
-    {
-        "name": "东方卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/dfhd"
-    },
-    {
-        "name": "天津卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/tjhd"
-    },
-    {
-        "name": "东南卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/dnhd"
-    },
-    {
-        "name": "江西卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/jxhd"
-    },
-    {
-        "name": "河北卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/hebhd"
-    },
-    {
-        "name": "湖南卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/hunanhd"
-    },
-    {
-        "name": "湖北卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/hbhd"
-    },
-    {
-        "name": "辽宁卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/lnhd"
-    },
-    {
-        "name": "四川卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/schd"
-    },
-    {
-        "name": "江苏卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/jshd"
-    },
-    {
-        "name": "浙江卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/zjhd"
-    },
-    {
-        "name": "山东卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/sdhd"
-    },
-    {
-        "name": "广东卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/gdhd"
-    },
-    {
-        "name": "深圳卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/szhd"
-    },
-    {
-        "name": "黑龙江卫视高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/hljhd"
-    },
-    {
-        "name": "CHC高清电影",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/chchd"
-    },
-    {
-        "name": "上海纪实高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/docuchina"
-    },
-    {
-        "name": "金鹰纪实高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/gedocu"
-    },
-    {
-        "name": "全纪实高清",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/documentaryhd"
-    },
-    {
-        "name": "凤凰卫视中文台",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/fhzw"
-    },
-    {
-        "name": "凤凰卫视资讯台",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/fhzx"
-    },
-    {
-        "name": "凤凰卫视电影台",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/fhdy"
-    },
-    {
-        "name": "星空卫视",
-        "videoUrl": "rtmp://58.200.131.2:1935/livetv/startv"
+      "url": "http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225641/index.m3u8",
+      "title": "CCTV-15音乐"
     }
 ]
